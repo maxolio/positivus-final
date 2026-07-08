@@ -1,0 +1,14 @@
+{
+  "output": {
+    "filePath": "repomix-output.txt",
+    "style": "plain"
+  },
+  "ignore": {
+    "useGitignore": true,
+    "customPatterns": [
+      "package-lock.json",
+      "yarn.lock",
+      "pnpm-lock.yaml"
+    ]
+  }
+}

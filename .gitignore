@@ -1,0 +1,18 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Среда разработки JetBrains (WebStorm / PhpStorm / IDEA)
+.idea/
+*.iml
+out/
+
+# Зависимости
+node_modules/
+dist/
+build/
+
+# Файл вывода Repomix
+repomix-output.txt
+repomix-output.xml
+repomix-output.markdown
