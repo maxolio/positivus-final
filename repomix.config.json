@@ -8,7 +8,9 @@
     "customPatterns": [
       "package-lock.json",
       "yarn.lock",
-      "pnpm-lock.yaml"
+      "pnpm-lock.yaml",
+      "**/*.css",
+      "**/*.css.map"
     ]
   }
 }

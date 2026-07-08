@@ -1,0 +1,23 @@
+{
+  "name": "positivus-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxolio/positivus-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxolio/positivus-final/issues"
+  },
+  "homepage": "https://github.com/maxolio/positivus-final#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

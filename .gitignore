@@ -6,6 +6,7 @@ Thumbs.db
 .idea/
 *.iml
 out/
+package-lock.json
 
 # Зависимости
 node_modules/
