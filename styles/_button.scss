@@ -1,0 +1,25 @@
+@use "base" as *;
+
+.button {
+  @include flex-center(true);
+
+  height: var(--button-height);
+  padding-inline: 35px;
+  border: var(--border);
+  font-size: 20px;
+  text-wrap: nowrap;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius);
+
+
+  @include hover {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: var(--color-dark);
+  }
+}

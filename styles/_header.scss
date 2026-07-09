@@ -1,0 +1,76 @@
+@use "base" as *;
+
+.header {
+  padding-block: fluid(60, 30);
+
+  @include mobile {
+    padding-block: 20px;
+  }
+
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(40, 10);
+  }
+
+  &__logo {
+    margin-right: auto;
+    min-width: 120px;
+
+    @include mobile {
+      max-width: 144px;
+    }
+  }
+
+  &__menu {
+    @include fluid-text(20, 18);
+
+    text-wrap: nowrap;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: fluid(40, 10);
+
+      @include tablet {
+        column-gap: 10px;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: fluid(48, 30);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50% ;
+        width: 0;
+        height: 2px;
+        border-radius: 5px;
+        background-color: currentColor;
+        transition-duration: var(--transition-duration);
+      }
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__button {
+
+    @include tablet {
+      height: 50px;
+      padding-inline: 18px;
+      font-size: 16px;
+    }
+  }
+}

@@ -25,6 +25,13 @@ a {
   color: inherit;
 }
 
+button,
+a,
+input[type="submit"] {
+  -webkit-user-select: none; /* Для iOS Safari */
+  user-select: none;         /* Стандартное свойство */
+}
+
 h1 {
   @include fluid-text(60, 43);
 }
