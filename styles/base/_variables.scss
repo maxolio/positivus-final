@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 :root {
   --color-dark: #191A23;
   --color-dark-alt: #292A32;
@@ -19,11 +21,12 @@
   --container-width: 1240px;
   --container-padding-x: 20px;
 
-  --section-padding-y: 70px;
+  --section-padding-y: #{fluid(70, 30)};
 
   --input-height: 60px;
   --button-height: 68px;
 
   --transition-duration: 0.2s;
+  --transition-duration-l: 0.3s;
 
 }

@@ -7,6 +7,19 @@
   border: none;
   padding: 0;
 
+  opacity: 0;
+
+
+  &[open] {
+    opacity: 1;
+
+    transition: opacity var(--transition-duration-l) ease;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
   &:modal {
     max-width: 100%;
     max-height: 100%;

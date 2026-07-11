@@ -1,0 +1,5 @@
+@use "base" as *;
+
+.section {
+  padding-block: var(--section-padding-y);
+}
