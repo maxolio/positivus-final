@@ -1,0 +1,21 @@
+@use "base" as*;
+
+.greed {
+  --greedColumns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--greedColumns), 1fr);
+  gap: fluid(40, 30);
+
+  @for $i from 2 through 6 {
+    &--#{$i} {
+      --greedColumns: #{$i};
+    }
+  }
+
+  &--2 {
+    @include tablet {
+      --greedColumns: 1;
+    }
+  }
+}

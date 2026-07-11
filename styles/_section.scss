@@ -2,4 +2,31 @@
 
 .section {
   padding-block: var(--section-padding-y);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: fluid(80, 40);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    max-width: 580px;
+    font-size: 18px;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+
+  }
 }

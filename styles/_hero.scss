@@ -5,6 +5,10 @@
   flex-direction: column;
   row-gap: var(--section-padding-y);
 
+  @include desktop {
+    row-gap: 50px;
+  }
+
   &__main {
     display: flex;
     align-items: center;
@@ -58,7 +62,7 @@
     }
 
     @include mobile {
-      max-width: 80%;
+      max-width: 100%;
       order: 2;
     }
   }

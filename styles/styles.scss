@@ -1,5 +1,6 @@
 @use "base" ;
 
+@use "greed";
 @use "button";
 @use "burger-button";
 @use "cross-button";
@@ -8,3 +9,17 @@
 
 @use "section";
 @use "hero";
+
+@use "puddle-bg";
+@use "services";
+@use "service-card";
+@use "banner";
+
+
+//main {
+//  section{
+//    &:not(:last-child) {
+//      display: none;
+//    }
+//  }
+//}
