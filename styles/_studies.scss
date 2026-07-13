@@ -1,0 +1,81 @@
+@use "base" as *;
+
+.studies {
+  border-radius: var(--border-radius-large);
+
+  @include tablet-above {
+    padding: fluid(70, 42) fluid(60, 50);
+    background-color: var(--color-dark);
+  }
+
+  &__list {
+    display: flex;
+
+    @include tablet {
+      column-gap: 20px;
+
+      overflow-x: auto; // Разрешает прокрутку по горизонтали
+      scroll-snap-type: x mandatory; // Включает "прилипание" элементов при скролле
+      scroll-behavior: smooth;   // Делает прокрутку плавной
+
+      scrollbar-width: none; // Для Firefox
+      &::-webkit-scrollbar {
+        display: none; // Для Chrome, Safari, Opera
+      }
+    }
+
+  }
+
+  &__item {
+    --studiesItemPaddingX: #{fluid(64, 20)};
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+
+    @include tablet-above {
+      flex: 1;
+
+      &:not(:last-child) {
+        padding-right: var(--studiesItemPaddingX);
+        border-right: 1px solid var(--color-light);
+      }
+
+      &:not(:first-child) {
+        padding-left: var(--studiesItemPaddingX);
+      }
+    }
+
+    @include tablet {
+      min-width: 350px;
+      padding: 42px 50px;
+      background-color: var(--color-dark);
+      border-radius: var(--border-radius-large);
+
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      max-width: 350px;
+    }
+  }
+
+
+  &__description {
+    color: var(--color-light);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    column-gap: 15px;
+    color: var(--color-accent);
+    font-size: 20px;
+
+    @include hover {
+      scale: 1.03;
+    }
+  }
+}
