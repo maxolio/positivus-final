@@ -17,3 +17,9 @@ build/
 repomix-output.txt
 repomix-output.xml
 repomix-output.markdown
+
+# Служебные файлы IDE-ассистента ProxyAI
+.proxyai/
+
+# Архивы
+*.zip
