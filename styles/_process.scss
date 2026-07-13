@@ -1,0 +1,105 @@
+@use "base" as *;
+
+.process {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(30, 20);
+
+    counter-reset: custom-counter;
+    list-style: none;
+  }
+
+  &__item {
+    counter-increment: custom-counter;
+  }
+
+  &__accordion {
+    --indicatorVerticalRotate: 90deg;
+
+    padding: fluid(40, 30) fluid(60, 30);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-gray);
+    box-shadow: var(--box-shadow);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    &[open] {
+      --indicatorVerticalRotate: 0deg;
+
+      background-color: var(--color-accent);
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 30px;
+      cursor: pointer;
+      user-select: none;
+
+      // === Скрываем стандартный маркер-треугольник браузера ===
+      list-style: none; // Для Firefox и современных браузеров
+      &::-webkit-details-marker {
+        display: none; // Для Chrome, Safari и Opera
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+
+      &::before {
+        content: '0' counter(custom-counter);
+        font-size: 2em;
+      }
+
+      @include mobile {
+        column-gap: 25px;
+        font-size: 18px;
+
+      }
+    }
+
+    &-indicator {
+      @include flex-center;
+      @include square(fluid(58, 40));
+
+      position: relative;
+      background-color: var(--color-gray);
+      border: var(--border);
+      border-radius: 50%;
+      flex-shrink: 0;
+
+
+      &::before,
+      &::after {
+        @include abs-center;
+
+        content: '';
+        width: 43%;
+        height: 10%;
+        background-color: var(--color-dark);
+        border-radius: 2px;
+      }
+
+      &::after {
+        rotate: var(--indicatorVerticalRotate);
+        transition-duration: var(--transition-duration);
+      }
+    }
+
+    &-body {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: var(--border);
+    }
+
+  }
+}

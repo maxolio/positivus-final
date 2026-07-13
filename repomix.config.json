@@ -10,7 +10,9 @@
       "yarn.lock",
       "pnpm-lock.yaml",
       "**/*.css",
-      "**/*.css.map"
+      "**/*.css.map",
+      ".proxyai/**",
+      "**/*.zip"
     ]
   }
 }
