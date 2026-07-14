@@ -1,0 +1,24 @@
+@use "base" as *;
+
+.pagination {
+  &__list {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__button {
+    @include reset-button;
+    @include flex-center;
+    @include square(24px);
+
+    color: var(--color-light);
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &.is-current {
+      color: var(--color-accent);
+    }
+  }
+}
