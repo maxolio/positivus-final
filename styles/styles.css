@@ -1264,8 +1264,4 @@ h4 {
   color: var(--color-accent);
 }
 
-main section:not(:last-child) {
-  display: none;
-}
-
 /*# sourceMappingURL=styles.css.map */
