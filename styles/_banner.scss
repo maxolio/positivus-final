@@ -32,6 +32,10 @@
 
   &__description {
     max-width: 500px;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__image {

@@ -18,4 +18,14 @@
       --greedColumns: 1;
     }
   }
+
+  &--3 {
+    @include desktop {
+      --greedColumns: 2;
+    }
+
+    @include mobile {
+      --greedColumns: 1;
+    }
+  }
 }

@@ -1,0 +1,17 @@
+@use "base" as *;
+
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  &__button {
+    align-self: end;
+    min-width: 260px;
+
+    @include mobile {
+      align-self: center;
+      min-width: 320px;
+    }
+  }
+}
