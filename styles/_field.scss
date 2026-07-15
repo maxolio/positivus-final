@@ -1,0 +1,40 @@
+@use "base" as *;
+
+.field {
+  @include fluid-text(16, 14);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  @include mobile {
+    row-gap: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: fluid(30, 20);
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    @include hover {
+      border-color: var(--color-accent);
+    }
+
+    &:focus {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-gray-alt);
+    }
+
+    &--textarea {
+      height: fluid(190, 130);
+      padding: 18px;
+      resize: none;
+    }
+  }
+}
