@@ -5,6 +5,8 @@ $tablet: 1023px;
 
 $mobile: 767px;
 
+$mobile-l: 480px;
+
 $mobile-s: 430px;
 
 @mixin desktop-above {
@@ -51,6 +53,18 @@ $mobile-s: 430px;
 
 @mixin mobile-s {
   @media (width <= $mobile-s ) {
+    @content;
+  }
+}
+
+@mixin mobile-l-above {
+  @media (width > $mobile-l ) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media (width <= $mobile-l ) {
     @content;
   }
 }

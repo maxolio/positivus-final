@@ -7,6 +7,15 @@
   flex-direction: column;
   align-items: start;
 
+  &--footer {
+    .field__input {
+      height: 68px;
+      color: var(--color-light);
+      background-color: transparent;
+      border-color: var(--color-light);
+    }
+  }
+
   @include mobile {
     row-gap: 10px;
   }
@@ -37,4 +46,6 @@
       resize: none;
     }
   }
+
+
 }

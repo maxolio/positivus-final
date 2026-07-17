@@ -32,14 +32,17 @@
 @use "field";
 @use "contact-us";
 
+@use "soc1a1s";
+@use "subscribe-form";
+@use "footer";
 
 
 
 
 //main {
 //  section{
-//    &:not(:last-child) {
 //      display: none;
+//    &:not(:last-child) {
 //    }
 //  }
 //}

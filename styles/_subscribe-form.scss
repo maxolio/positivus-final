@@ -1,0 +1,19 @@
+@use "base" as *;
+
+.subscribe-form {
+  padding: fluid(58, 30) fluid(40, 30);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__field {
+    width: 100%;
+    background-color: var(--color-dark-alt);
+  }
+}
